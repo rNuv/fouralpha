@@ -1,5 +1,6 @@
 # build
 engine/__pycache__/
+engine/.env
 
 # dependencies
 /node_modules
