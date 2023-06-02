@@ -2,6 +2,7 @@
 engine/__pycache__/
 engine/.env
 engine/fouralpha-b77bd-firebase-adminsdk-6y34r-82a0117df5.json
+.env
 
 # dependencies
 /node_modules
