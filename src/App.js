@@ -45,7 +45,7 @@ function App() {
 
     getEventData();
   }, []);
-  console.log(JSON.stringify(arbData));
+  //console.log(JSON.stringify(arbData));
 
   const calcOdds = (price_1, price_2) => {
     if (price_1 < 0 && price_2 > 0) {
