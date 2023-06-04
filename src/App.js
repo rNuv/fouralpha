@@ -6,7 +6,7 @@ import ArbTable from "./ArbTable";
 import { db } from "./firebase";
 import "./App.css";
 
-const markets = ["basketball_nba"];
+const markets = ["basketball_nba", "americanfootball_nfl", "icehockey_nhl", "americanfootball_ncaaf", "baseball_mlb"];
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -16,10 +16,7 @@ function App() {
     const getEventData = async () => {
       markets.forEach(async (market) => {
         const eventSnapshot = await getDocs(
-          query(
-            collection(db, "arb_opportunities", market, "events"),
-            limit(10)
-          )
+          query(collection(db, "arb_opportunities", market, "events"), limit(5))
         );
         eventSnapshot.forEach(async (event) => {
           const arbSnapshot = await getDocs(
@@ -33,7 +30,7 @@ function App() {
                 "arbs"
               )
             ),
-            limit(3)
+            limit(2)
           );
           arbSnapshot.forEach((arb) => {
             let d = arb.data();
@@ -48,6 +45,7 @@ function App() {
 
     getEventData();
   }, []);
+  console.log(JSON.stringify(arbData));
 
   const calcOdds = (price_1, price_2) => {
     if (price_1 < 0 && price_2 > 0) {
@@ -73,7 +71,7 @@ function App() {
 
   const formatDate = (date) => {
     var d = new Date(date);
-    return (d.getMonth() + 1 + "/" + d.getDate() + "/" + d.getFullYear());
+    return d.getMonth() + 1 + "/" + d.getDate() + "/" + d.getFullYear();
   };
 
   const togglePage = () => {
