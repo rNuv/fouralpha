@@ -70,8 +70,8 @@ function App() {
   };
 
   const formatDate = (date) => {
-    var d = new Date(date);
-    return d.getMonth() + 1 + "/" + d.getDate() + "/" + d.getFullYear();
+    const d = new Date(date);
+    return d;
   };
 
   const togglePage = () => {
