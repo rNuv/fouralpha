@@ -71,7 +71,11 @@ function App() {
 
   const formatDate = (date) => {
     const d = new Date(date);
-    return d;
+    const weekday = d.toLocaleString('default', { weekday: 'short'});
+    const month = d.toLocaleString('default', { month: 'short'});
+    const day = d.toLocaleString('default', { day: 'numeric'});
+    const time = d.toLocaleString('default', { timeStyle: 'short'});
+    return weekday + ", " + month + " " + day + " at " + time
   };
 
   const togglePage = () => {
