@@ -9,7 +9,7 @@ const Team = () => {
         role: "Co-Founder | Chief Executive Officer",
         img: "/team/anthony.jpg",
         url: "https://www.linkedin.com/in/anthonyjzhang1/",
-        desc: "Anthony Zhang is studying Mechanical Engineering and Computer Science at Duke University.  He is interning with Fidelity Investments as a full stack software engineer. In his free time, Anthony enjoys videography,  thrifting, and backpacking through Europe.",
+        desc: "Anthony Zhang is studying Mechanical Engineering and Computer Science at Duke University. He is interning with Fidelity Investments as a full stack software engineer. In his free time, Anthony enjoys videography, thrifting, and backpacking through Europe.",
       },
       {
         name: "Arnav Nayak | an251@duke.edu",
@@ -23,7 +23,7 @@ const Team = () => {
         role: "Co-Founder | Chief Operations Officer",
         img: "/team/adi.jpeg",
         url: "https://www.linkedin.com/in/adi842/",
-        desc: "Adi Raj is studying Financial Engineering  at Duke University. He is interning with TC Capital, a leading investment bank advising on cross-border M&A in Southeast Asia. Outside of school, he enjoys producing beats, listening to podcasts, and  mountain biking.",
+        desc: "Adi Raj is studying Financial Engineering  at Duke University. He is interning with TC Capital, a leading investment bank advising on cross-border M&A in Southeast Asia. Outside of school, he enjoys producing beats, listening to podcasts, and mountain biking.",
       },
       {
         name: "Avi Singh | as1198@duke.edu ",
@@ -33,7 +33,74 @@ const Team = () => {
         desc: "Avi Singh is studying Math and Computer Science at Duke University. He is interning with Enhanced Healthcare Partners, a private equity firm with over $1 billion in assets under management. When he’s not working, Avi enjoys pickup basketball and Punjabi music.",
       },
     ],
-    business: [
+    product: [
+      {
+        img: "/team/zeynep.jpeg",
+        name: "Zeynep Akkok",
+        url: "https://www.linkedin.com/in/zeynep-akkok/",
+      },
+      {
+        img: "/team/george.jpeg",
+        name: "George Fang",
+        url: "https://www.linkedin.com/in/georgefang1/",
+      },
+      {
+        img: "/team/shriya.jpeg",
+        name: "Shriya Challam",
+        url: "https://www.linkedin.com/in/shriyachallam/",
+      },
+      {
+        img: "/team/elysia.jpeg",
+        name: "Elysia Ye",
+        url: "https://www.linkedin.com/in/elysia-ye-40b166132/",
+      },
+    ],
+    data: [
+      {
+        img: "/team/jewel.jpeg",
+        name: "Jewel Levy",
+        url: "https://www.linkedin.com/in/jewel-levy-0541251b6/",
+      },
+      {
+        img: "/team/myles.jpeg",
+        name: "Myles Bell",
+        url: "https://www.linkedin.com/in/myles-bell8045/",
+      },
+
+      {
+        img: "/team/yasha.jpeg",
+        name: "Yasha Doddabele",
+        url: "https://www.linkedin.com/in/yasha-doddabele/",
+      },
+      {
+        img: "/team/neil.jpeg",
+        name: "Neil Upreti",
+        url: "https://www.linkedin.com/in/neil-upreti-7038411a7/",
+      },
+    ],
+    product: [
+      {
+        img: "/team/allen.jpeg",
+        name: "Allen Markov",
+        url: "https://www.linkedin.com/in/allen-marakov/",
+      },
+      {
+        img: "/team/tanvi.jpg",
+        name: "Tanvi Poondota",
+        url: "https://www.linkedin.com/in/tanvipoondota/",
+      },
+      {
+        img: "/team/neve.jpeg",
+        name: "Neve Greenwald",
+        url: "https://www.linkedin.com/in/neve-greenwald-56b25985/",
+      },
+      {
+        img: "/team/diya.jpeg",
+        name: "Diya Panjabi",
+        url: "https://www.linkedin.com/in/diya-panjabi-827b95260/",
+      },
+    ],
+    /*business: [
       {
         img: "/team/zeynep.jpeg",
         name: "Zeynep Akkok",
@@ -99,7 +166,7 @@ const Team = () => {
         name: "Arnav Barve",
         url: "https://www.linkedin.com/in/arnav-barve/",
       },
-    ],
+    ],*/
   };
   return (
     <section className="flex  justify-center items-center lg:w-[105%] relative lg:-left-5 slant mt-28 lg:mt-20 bg-[#243447] ">
@@ -153,7 +220,7 @@ const Team = () => {
           </div>
           <div className="flex justify-start w-full items-start flex-col gap-10 mt-8 sm:mt-14">
             <h2 className="mt-2 text-white text-2xl md:text-[38px] font-medium max-w-[640px]">
-              Business Analysts
+              Product Managers
             </h2>
             <div className="sm:hidden block w-full team2">
               <Splide
@@ -168,7 +235,7 @@ const Team = () => {
                   type: "loop",
                 }}
               >
-                {TEAM__DATA.business.map((elem, idx) => {
+                {TEAM__DATA.product.map((elem, idx) => {
                   return (
                     <SplideSlide key={idx + elem.name}>
                       <TeamBox {...elem} />
@@ -178,7 +245,7 @@ const Team = () => {
               </Splide>
             </div>
             <div className="hidden place-items-center xl:justify-items-start sm:grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 w-full gap-5">
-              {TEAM__DATA.business.map((elem, idx) => {
+              {TEAM__DATA.product.map((elem, idx) => {
                 return <TeamBox {...elem} key={idx + elem.name} />;
               })}
             </div>
@@ -217,7 +284,7 @@ const Team = () => {
           </div>
           <div className="flex justify-start w-full items-start flex-col gap-10 mt-8 sm:mt-14">
             <h2 className="mt-2 text-white text-2xl md:text-[38px] font-medium max-w-[640px]">
-              Product Managers
+              Business Analysts
             </h2>
             <div className="sm:hidden block w-full team2">
               <Splide
@@ -232,7 +299,7 @@ const Team = () => {
                   type: "loop",
                 }}
               >
-                {TEAM__DATA.product.map((elem, idx) => {
+                {TEAM__DATA.business.map((elem, idx) => {
                   return (
                     <SplideSlide key={idx + elem.name}>
                       <TeamBox {...elem} />
@@ -242,7 +309,7 @@ const Team = () => {
               </Splide>
             </div>
             <div className="hidden place-items-center xl:justify-items-start sm:grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 w-full gap-5">
-              {TEAM__DATA.product.map((elem, idx) => {
+              {TEAM__DATA.business.map((elem, idx) => {
                 return <TeamBox {...elem} key={idx + elem.name} />;
               })}
             </div>
