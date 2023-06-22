@@ -78,7 +78,7 @@ const Team = () => {
         url: "https://www.linkedin.com/in/neil-upreti-7038411a7/",
       },
     ],
-    product: [
+    business: [
       {
         img: "/team/allen.jpeg",
         name: "Allen Markov",
